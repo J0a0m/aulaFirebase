@@ -1,7 +1,7 @@
 import {View, Text, TextInput, Button, Alert} from 'react-native'
 import {useState} from 'react'
 
-export default function Login(){
+export default function Login({navigation}){
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
 
@@ -26,6 +26,11 @@ export default function Login(){
             <Button
                 title='Login'
                 onPress={()=>alert('Login em construção')}
+            />
+
+            <Button
+                title="Não tenho conta"
+                onPress={()=>navigation.navigate('Cadastro')}
             />
 
         </View>
